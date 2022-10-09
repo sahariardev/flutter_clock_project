@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_clock_ui/screens/first_screen.dart';
 
 import 'clocks/clock.dart';
 
@@ -40,22 +41,17 @@ class AppClock extends StatelessWidget {
                     children: [
                       TabBar(
                         indicator: UnderlineTabIndicator(
-                          borderSide: BorderSide(
-                            color: Color(0xffff0863),
-                            width: 4.0
-                          ),
+                          borderSide:
+                              BorderSide(color: Color(0xffff0863), width: 4.0),
                         ),
                         indicatorWeight: 15,
                         indicatorSize: TabBarIndicatorSize.label,
                         labelColor: Color(0xff2d386b),
                         labelStyle: TextStyle(
-                          fontSize: 12,
-                          letterSpacing: 1.3,
-                          fontWeight: FontWeight.w500
-                        ),
-
+                            fontSize: 12,
+                            letterSpacing: 1.3,
+                            fontWeight: FontWeight.w500),
                         unselectedLabelColor: Colors.black26,
-
                         tabs: [
                           Tab(
                             text: "ALARMS",
@@ -64,7 +60,6 @@ class AppClock extends StatelessWidget {
                               size: 48,
                             ),
                           ),
-
                           Tab(
                             text: "RECORDS",
                             icon: Icon(
@@ -72,7 +67,6 @@ class AppClock extends StatelessWidget {
                               size: 48,
                             ),
                           ),
-
                           Tab(
                             text: "PROFILE",
                             icon: Icon(
@@ -87,6 +81,15 @@ class AppClock extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          body: TabBarView(
+            children: [
+              Center(
+                child: FirstTab(),
+              ),
+              Text('hhelo 2'),
+              Text('hhelo 3'),
+            ],
           ),
         ),
       ),

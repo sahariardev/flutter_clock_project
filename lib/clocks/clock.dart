@@ -73,12 +73,12 @@ class _Clock extends State<Clock> {
         color: Colors.transparent,
         boxShadow: [
           BoxShadow(
-            offset: const Offset(0.0, 5.0),
+            offset: const Offset(0.0, 0.0),
             blurRadius: 0.0,
             color: widget.shadowColor,
           ),
           BoxShadow(
-              offset: const Offset(0.0, 5.0),
+              offset: const Offset(0.0, 0.0),
               color: widget.circleColor,
               spreadRadius: -15,
               blurRadius: 10)

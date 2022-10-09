@@ -35,8 +35,8 @@ class ClockDialPainter extends CustomPainter {
       //make the length and stroke of the tick marker longer and thicker depending
       tickMarkLength = hourAndMinTickMarkLength;
       tickPaint.strokeWidth = hourAndMinTickMarkWidth;
-      canvas.drawLine(Offset(0.0, -radius),
-          Offset(0.0, -radius + tickMarkLength), tickPaint);
+      canvas.drawLine(Offset(0.0, radius*.95),
+          Offset(0.0, (radius*.95) + tickMarkLength), tickPaint);
 
       canvas.rotate(angle);
     }
