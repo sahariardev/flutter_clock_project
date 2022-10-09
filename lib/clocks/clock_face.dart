@@ -1,10 +1,8 @@
-import 'clock_text.dart';
 import 'package:flutter/material.dart';
-import 'clock_dial_painter.dart';
-import 'clock_hands.dart';
 
-class ClockFace extends StatelessWidget{
+import 'clock_text.dart';
 
+class ClockFace extends StatelessWidget {
   final DateTime? dateTime;
   final ClockText clockText;
 
@@ -19,16 +17,19 @@ class ClockFace extends StatelessWidget{
           aspectRatio: .75,
           child: Container(
             width: double.infinity,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Color(0xfff4f9fd),
-            ),
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color(0xfff4f9fd),
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(8.0, 0),
+                      blurRadius: 13,
+                      spreadRadius: 1,
+                      color: Color(0xffd3e0f0))
+                ]),
           ),
-
         ),
       ),
     );
   }
 }
-
-
