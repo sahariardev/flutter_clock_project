@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clock_ui/screens/first_screen.dart';
+import 'package:flutter_clock_ui/screens/second_screen.dart';
 
 void main() => runApp(new MyApp());
 
@@ -86,7 +87,9 @@ class AppClock extends StatelessWidget {
               Center(
                 child: FirstTab(),
               ),
-              Text('hhelo 2'),
+              Center(
+                child: SecondScreen(),
+              ),
               Text('hhelo 3'),
             ],
           ),
@@ -121,10 +124,9 @@ class BottomBar extends StatelessWidget {
             child: Text(
               '+',
               style: TextStyle(
-                color: Color(0xff253165),
-                fontWeight: FontWeight.w700,
-                fontSize: 25
-              ),
+                  color: Color(0xff253165),
+                  fontWeight: FontWeight.w700,
+                  fontSize: 25),
             ),
             backgroundColor: Colors.white,
             foregroundColor: Colors.black,
