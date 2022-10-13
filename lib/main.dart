@@ -90,7 +90,9 @@ class AppClock extends StatelessWidget {
               Center(
                 child: SecondScreen(),
               ),
-              Text('hhelo 3'),
+              const Center(
+                child: Text('User profile'),
+              )
             ],
           ),
         ),

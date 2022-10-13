@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../paints/graph_painter.dart';
+
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,41 @@ class SecondScreen extends StatelessWidget {
                         color: Color(0xff5b6990)),
                   ),
                 ],
-              )
+              ),
+              Container(
+                height: 200,
+                width: 150,
+                decoration: BoxDecoration(
+                    color: Color(0xfff0f5fb),
+                    border: Border.all(width: 8, color: Color(0xffd3e1ed)),
+                    borderRadius: BorderRadius.circular(3)),
+                padding: EdgeInsets.all(15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:  [
+                    Text(
+                      "THIS WEEK",
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 1.3,
+                        color: Color(0xff5b6990),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      height: 120,
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      width: double.infinity,
+                      child: CustomPaint(
+                        foregroundPainter: GraphPainter(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
           const SizedBox(
@@ -83,8 +119,8 @@ class RecordItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      decoration: const BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Color(0xffdde9f7), width: 1.5)),
       ),
@@ -93,12 +129,12 @@ class RecordItem extends StatelessWidget {
         children: [
           Text(
             day,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: Color(0xff5b6990)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Row(
